@@ -38,7 +38,7 @@ api.interceptors.response.use(
       console.error("Erro 401 - Não autorizado. Token pode estar expirado.");
       localStorage.removeItem("usuarioLogado");
       localStorage.removeItem("token");
-      window.location.href = "/";
+      // window.location.href = "/"; //Não redirecione para mostrar o erro no formulário de login
     }
 
     return Promise.reject(error);
