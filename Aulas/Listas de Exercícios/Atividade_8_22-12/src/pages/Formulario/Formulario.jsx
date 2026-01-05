@@ -77,7 +77,7 @@ export default function Formulario() {
       dados.append("formato", formData.formato);
       dados.append("quantidade", Number(formData.quantidade));
       dados.append(
-        "numero_paginas",
+        "numeroDePaginas", //Na api este campo esta com o nome numeroDePaginas (último commit)
         formData.numeroDePaginas
           ? Number(formData.numeroDePaginas)
           : ""
@@ -121,6 +121,7 @@ export default function Formulario() {
 
       setImagemFile(null);
       setPreview("");
+      //TODO: Após cadastrar o livro redirecione para o painel com o novo livro adicionado.
     } catch (erro) {
       console.error(
         "Erro ao cadastrar livro:",
