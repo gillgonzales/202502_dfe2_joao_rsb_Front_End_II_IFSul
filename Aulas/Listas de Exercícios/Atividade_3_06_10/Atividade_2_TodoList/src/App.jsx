@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import TaskList from "./TaskList";
 
 export default function App() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState([]);//Ler o localStorage na inicialização do state.
 
   // carregar tarefas do localStorage
   useEffect(() => {
@@ -12,7 +12,9 @@ export default function App() {
 
   // salvar tarefas no localStorage
   useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+    //resolve mas não é o ideal, o ideal é passar uma função ao useState que retorne
+    //  o conteúdo do localStorage ou um array vazio se não houver nada
+   tasks.length && localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
   const addTask = () => {

@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import TaskList from "./TaskList";
 
 export default function App() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState([]); //Ler o localStorage
   const taskInputRef = useRef(); // referência para o input de tarefa
 
   // carregar tarefas do localStorage
