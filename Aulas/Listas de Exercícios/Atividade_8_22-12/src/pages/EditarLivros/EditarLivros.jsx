@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import api from "../../services/api";
 import { useNavigate } from "react-router-dom";
 
-export default function EditarLivros() {
+export default function EditarLivros() { //Erros na branch avaliada.
   const [livros, setLivros] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
