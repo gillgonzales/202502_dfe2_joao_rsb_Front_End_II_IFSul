@@ -1,4 +1,4 @@
-import "./card.css";
+import "./Card.css";
 import { useNavigate } from "react-router-dom";
 
 export default function Card({ livro }) {

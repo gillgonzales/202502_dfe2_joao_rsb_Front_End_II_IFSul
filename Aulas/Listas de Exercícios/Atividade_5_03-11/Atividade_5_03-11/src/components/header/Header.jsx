@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import carrinhoIcone from "/src/assets/imagens/iconecarrinho.gif";
 import estanteIcone from "/src/assets/imagens/iconeestante.png";
-import "./header.css";
+import "./Header.css";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
