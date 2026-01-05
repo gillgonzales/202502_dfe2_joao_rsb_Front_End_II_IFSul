@@ -37,7 +37,7 @@ export function LivrosProvider({ children }) {
   const [livros, setLivros] = useState([]);
 
   useEffect(() => {
-    // Mock dos livros
+    // Mock dos livros //Já deveriam estar vindo de algum endpoint público da api no backend.
     const mockLivros = [
     {
       id: 1,
