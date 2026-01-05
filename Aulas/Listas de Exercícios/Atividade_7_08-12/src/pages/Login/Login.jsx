@@ -26,7 +26,7 @@ export default function Login() {
       });
 
       const { token, usuario } = response.data;
-
+     debugger
       if (token) {
         // Salva token e usuário logado
         localStorage.setItem("token", token);
@@ -38,7 +38,10 @@ export default function Login() {
         throw new Error("Token não encontrado na resposta da API.");
       }
     } catch (erro) {
+
+  
       console.error("Erro ao fazer login:", erro.response?.data || erro.message);
+      debugger
       setErro("Credenciais incorretas ou tipo incompatível!");
     }
   };
