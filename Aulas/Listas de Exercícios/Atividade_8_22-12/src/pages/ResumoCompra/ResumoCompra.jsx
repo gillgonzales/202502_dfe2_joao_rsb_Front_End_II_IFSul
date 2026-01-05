@@ -39,6 +39,7 @@ export default function ResumoCompra() {
             .replace(/[\u0300-\u036f]/g, ""),
           forma_pagamento: pagamento,
           endereco: enderecoTexto,
+          preco_unitario: 1 //Api acusa erro de falta do campo preco_unitario
         };
         console.log("Payload enviado para API:", payload);
 
